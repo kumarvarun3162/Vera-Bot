@@ -155,8 +155,7 @@ async def healthz():
 @app.get("/v1/metadata")
 async def metadata():
     return {
-        "team_name": os.environ.get("TEAM_NAME", "Vera-Pro"),
-        "team_members": [os.environ.get("TEAM_MEMBER", "Submission")],
+        "Name": os.environ.get("NAME", "Vera-Pro"),
         "model": "llama-3.3-70b-versatile via Groq",
         "approach": (
             "4-context composer with trigger-kind routing. "
